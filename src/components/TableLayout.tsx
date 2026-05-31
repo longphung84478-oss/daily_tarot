@@ -286,27 +286,7 @@ export default function TableLayout({ spread, question, onBack, onInterpret }: T
             </motion.div>
           )}
 
-          {/* Core AI Interpreter Trigger Button */}
-          {stage === "revealing" && (
-            <div className="flex flex-col items-center justify-center gap-3 pt-4">
-              <motion.button
-                whileHover={allFlipped ? { scale: 1.02 } : {}}
-                whileTap={allFlipped ? { scale: 0.98 } : {}}
-                disabled={!allFlipped}
-                onClick={() => onInterpret(draws)}
-                className="group relative inline-flex items-center gap-2.5 px-10 py-4 rounded-xl border border-amber-400 bg-amber-500 text-slate-950 hover:bg-amber-400 disabled:border-slate-800 disabled:bg-slate-950 disabled:text-slate-600 transition-all font-sans font-bold tracking-wider uppercase text-sm cursor-pointer shadow-[0_0_30px_rgba(245,158,11,0.15)] disabled:shadow-none"
-              >
-                {allFlipped ? "Giải Mã Chi Tiết Từ AI Tarot" : "Hãy Lật Tất Cả Các Lá Bài"}
-                <Sparkles className={`w-4 h-4 ${allFlipped ? "text-slate-950 animate-pulse" : "text-gray-650"}`} />
-              </motion.button>
-              
-              {!allFlipped && (
-                <span className="text-[10px] text-gray-500 font-mono tracking-widest text-center uppercase">
-                  (Còn {draws.filter((d) => !d.isFlipped).length} lá bài chưa lật mở)
-                </span>
-              )}
-            </div>
-          )}
+          {/* Core AI Interpreter Trigger Button - HIDDEN */}
         </div>
       ) : null}
     </div>
