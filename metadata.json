@@ -1,0 +1,6 @@
+{
+  "name": "Tarot Reader",
+  "description": "Xem bài Tarot huyền bí, nhận thông điệp chỉ dẫn tâm linh và luận giải chi tiết từ AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
